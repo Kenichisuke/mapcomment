@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'comments/new'
 
-  get 'comments/create'
+
+  resources :comments,  only: [ :new, :crate], format: false
+  resources :items,     only: [ :index, :show], format: false
 
   get 'pages/map'
 
